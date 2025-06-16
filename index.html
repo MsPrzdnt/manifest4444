@@ -30,6 +30,37 @@
         nav a:hover {
             color: #ffffff;
         }
+        /* Dropdown Styles */
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #111;
+            min-width: 180px;
+            z-index: 1;
+            border: 1px solid #333;
+            text-align: left;
+        }
+        .dropdown-content a {
+            color: #aaa;
+            padding: 12px 16px;
+            display: block;
+            text-decoration: none;
+            margin: 0;
+        }
+        .dropdown-content a:hover {
+            background-color: #222;
+            color: #fff;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover > a {
+            color: #ffffff;
+        }
         h1 {
             font-size: 2.5em;
             text-align: center;
@@ -58,11 +89,18 @@
 
     <nav class="top-nav">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
+        <div class="dropdown">
+            <a href="about.html">About</a>
+            <div class="dropdown-content">
+                <a href="circle.html">Circle of Giving</a>
+                <a href="crystals.html">Blessed Crystals</a>
+            </div>
+        </div>
         <a href="codex.html">The Codex</a>
         <a href="roadmap.html">Roadmap</a>
         <a href="contact.html">Contact</a>
     </nav>
+
 
 <div class="container">
     <h1>4444 Mystical Manifestations</h1>
