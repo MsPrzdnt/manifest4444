@@ -22,14 +22,51 @@
             border-bottom: 1px solid #333;
             font-size: 1.2em;
         }
-        nav a {
+        nav a, nav span.nav-label {
             color: #aaaaaa;
             text-decoration: none;
             margin: 0 20px;
+            cursor: default;
         }
         nav a:hover {
             color: #ffffff;
         }
+
+        /* Dropdown Styles */
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #111;
+            min-width: 180px;
+            z-index: 1;
+            border: 1px solid #333;
+            text-align: left;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .dropdown-content a {
+            color: #aaa;
+            padding: 10px 14px;
+            display: block;
+            text-decoration: none;
+            margin: 0;
+            font-size: 0.6em; /* ~50% smaller than main nav */
+        }
+        .dropdown-content a:hover {
+            background-color: #222;
+            color: #fff;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover > span.nav-label {
+            color: #ffffff;
+        }
+
         h1 {
             font-size: 2.5em;
             text-align: center;
@@ -56,13 +93,21 @@
 </head>
 <body>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="codex.html">The Codex</a>
-    <a href="roadmap.html">Roadmap</a>
-    <a href="contact.html">Contact</a>
-</nav>
+    <nav class="top-nav">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <span class="nav-label">About</span>
+            <div class="dropdown-content">
+                <a href="about.html">About Manifest4444</a>
+                <a href="circle.html">Circle of Giving</a>
+                <a href="crystals.html">Blessed Crystals</a>
+            </div>
+        </div>
+        <a href="codex.html">The Codex</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
 
 <div class="container">
 <h1>The Origin of Mystical Manifestations</h1>
